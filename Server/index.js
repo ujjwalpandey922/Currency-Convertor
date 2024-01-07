@@ -7,11 +7,7 @@ const app = express();
 // Set the port for the server
 const PORT = process.env.PORT || 5000;
 // Add this line to enable CORS for all routes
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+app.use(cors());
 // Start the server and log a message when it's running
 const server = app.listen(PORT, () => {
   console.log(`App Running on Port ${PORT}`);
