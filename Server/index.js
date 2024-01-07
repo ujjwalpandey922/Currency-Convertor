@@ -13,6 +13,11 @@ const server = app.listen(PORT, () => {
   console.log(`App Running on Port ${PORT}`);
 });
 
+// Check Server Running Status running
+app.get("/", (req, res) => {
+  res.send(`App Running Successfully......`);
+});
+
 // API endpoint to fetch the top 100 cryptocurrencies and supported currencies
 app.get("/crypto", async (req, res) => {
   try {
