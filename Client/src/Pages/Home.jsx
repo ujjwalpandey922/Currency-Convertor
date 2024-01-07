@@ -23,7 +23,9 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/crypto`);
+        const res = await fetch(
+          `https://currency-convertor-backend.onrender.com/crypto`
+        );
         const { topCryptos, supportedCurrencies } = await res.json();
 
         setCoinInfo(topCryptos);
@@ -66,7 +68,7 @@ const Home = () => {
     // Fetch conversion result
     try {
       const res = await fetch(
-        `http://localhost:5000/convert?sourceCrypto=${coinSelected.name}&amount=${amount}&targetCurrency=${currencySelected}`
+        `https://currency-convertor-backend.onrender.com/convert?sourceCrypto=${coinSelected.name}&amount=${amount}&targetCurrency=${currencySelected}`
       );
       const data = await res.json();
       setConvertedAmount(data.convertedAmount.toLocaleString());
