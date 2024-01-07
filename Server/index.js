@@ -1,7 +1,7 @@
 // Import required modules
 const express = require("express");
 const axios = require("axios");
-// const cors = require("cors");
+ const cors = require("cors");
 // Create an Express app
 const app = express();
 // Set the port for the server
