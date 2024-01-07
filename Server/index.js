@@ -53,6 +53,7 @@ app.get("/crypto", async (req, res) => {
   } catch (error) {
     // Handle errors and respond with an error message
     console.error("Error fetching data:", error.message);
+    console.error("Error stack trace:", error.stack);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
@@ -85,6 +86,7 @@ app.get("/convert", async (req, res) => {
   } catch (error) {
     // Handle errors and respond with an error message
     console.error("Error converting currency:", error.message);
+    console.error("Error stack trace:", error.stack);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
