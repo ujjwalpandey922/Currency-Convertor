@@ -1,7 +1,7 @@
 // Import required modules
 const express = require("express");
 const axios = require("axios");
- const cors = require("cors");
+const cors = require("cors");
 // Create an Express app
 const app = express();
 // Set the port for the server
@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 // Add this line to enable CORS for all routes
 app.use(
   cors({
-    origin: "https://currency-convertor-backend.onrender.com",
+    origin: "https://currency-convertor-backend.vercel.app",
   })
 );
 // Start the server and log a message when it's running

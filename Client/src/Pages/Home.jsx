@@ -24,7 +24,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          `https://currency-convertor-backend.onrender.com/crypto`
+          `https://currency-convertor-backend.vercel.app/crypto`
         );
         const { topCryptos, supportedCurrencies } = await res.json();
 
@@ -68,7 +68,7 @@ const Home = () => {
     // Fetch conversion result
     try {
       const res = await fetch(
-        `https://currency-convertor-backend.onrender.com/convert?sourceCrypto=${coinSelected.name}&amount=${amount}&targetCurrency=${currencySelected}`
+        `https://currency-convertor-backend.vercel.app/convert?sourceCrypto=${coinSelected.name}&amount=${amount}&targetCurrency=${currencySelected}`
       );
       const data = await res.json();
       setConvertedAmount(data.convertedAmount.toLocaleString());
