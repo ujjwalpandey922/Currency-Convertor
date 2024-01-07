@@ -1,0 +1,114 @@
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.5rem 1rem;
+  background-color: #0b0819;
+}
+/* ------------------------------NAVICONS-------------------------------------- */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav-icons span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 44px;
+  /* identical to box height */
+
+  background: linear-gradient(94.37deg, #3387d5 -5.94%, #7a06c9 115.34%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ------------------------------NAVTABS-------------------------------------- */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.nav-links li {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  text-transform: capitalize;
+
+  color: #5a5a5a;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  cursor: pointer;
+}
+.active {
+  color: #627eea;
+  font-weight: 600;
+  order: 0;
+  position: relative;
+}
+.active::after {
+  position: absolute;
+  bottom: -1.5rem;
+  left: -0.75rem;
+  content: "";
+  background-color: #627eea;
+  /* padding-top: 1rem; */
+  height: 0.1rem;
+  width: 4rem;
+}
+.connect-wallet {
+  background: linear-gradient(94.37deg, #44b496 -5.94%, #3006c9 115.34%);
+  padding: 1rem;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+
+  text-shadow: 0.364154px 0.364154px 0.364154px rgba(0, 0, 0, 0.25);
+}
+
+/* ===================================================MEDIA======================== */
+
+@media (max-width: 720px) {
+  .nav-icons span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    display: none;
+  }
+  .connect-wallet {
+    padding: 0.5rem;
+  }
+  .active::after {
+    bottom: -1rem;
+    left: -0.3rem;
+    width: 3rem;
+  }
+}
