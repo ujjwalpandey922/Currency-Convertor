@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 // Add this line to enable CORS for all routes
 app.use(
   cors({
-    origin: "https://currency-convertor-backend.vercel.app",
+    origin: "*",
   })
 );
 // Start the server and log a message when it's running
