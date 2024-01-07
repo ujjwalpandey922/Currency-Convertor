@@ -140,8 +140,8 @@ const Home = () => {
             </div>
 
             {/* Button to calculate result */}
-            <button className="buy" onClick={handleResult}>
-              Buy
+            <button className="convert" onClick={handleResult}>
+              Convert
             </button>
           </div>
         </div>
